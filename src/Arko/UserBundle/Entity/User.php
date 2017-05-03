@@ -33,10 +33,35 @@ class User extends BaseUser
      */
     protected $profile;
 
+    protected $role;
+
     public function __construct()
     {
         parent::__construct();
         // your own logic
+    }
+
+    public function isSuperAdmin()
+    {
+        $groups = $this->getGroups();
+
+        foreach ($groups as $group) {
+            if ($group->hasRole('ROLE_SUPER_ADMIN')) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public function status()
+    {
+        return $this->isEnabled() ? "Active" : "Inactive" ;
+    }
+
+    public function statusChangeText()
+    {
+        return !$this->isEnabled() ? "Active" : "Inactive" ;
     }
 
     /**
@@ -55,5 +80,32 @@ class User extends BaseUser
         $profile->setUser($this);
 
         $this->profile = $profile;
+    }
+
+    public function toArray($collection)
+    {
+        $this->setRoles($collection->toArray());
+    }
+
+    public function setRole($role)
+    {
+        $this->setRoles(array($role));
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRole()
+    {
+        $role = $this->getRoles();
+
+        return $role[0];
+    }
+
+    public function isGranted($role)
+    {
+        return in_array($role, $this->getRoles());
     }
 }

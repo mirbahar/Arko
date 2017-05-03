@@ -8,15 +8,14 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Table(name="fos_groups")
- * @ORM\Entity(repositoryClass="Bundle\UserBundle\Repository\GroupRepository")
+ * @ORM\Entity(repositoryClass="Arko\UserBundle\Repository\GroupRepository")
  */
 class Group extends BaseGroup
-{
-    /**
-     * @ORM\Id
-     * @ORM\Column(type="integer")
-     * @ORM\GeneratedValue(strategy="AUTO")
-     */
+{ /**
+ * @ORM\Id
+ * @ORM\Column(type="integer")
+ * @ORM\GeneratedValue(strategy="AUTO")
+ */
     protected $id;
 
     /**

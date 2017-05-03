@@ -71,3 +71,6 @@ fos_user:
     user_class: Arko\UserBundle\Entity\User
     group:
           group_class: Arko\UserBundle\Entity\Group
+    registration:
+            form:
+                type: Arko\UserBundle\Form\Type\UserFormType

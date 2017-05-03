@@ -1,4 +1,24 @@
+parameters:
+    userbundle_user.user.permission.security_provider.class: Arko\UserBundle\Permission\Provider\SecurityPermissionProvider
+    userbundle_user.user.permission_builder.class: Arko\UserBundle\Permission\PermissionBuilder
+
 services:
-#    arko_user.example:
-#        class: Arko\UserBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    userbundle_user.user.permission.security_provider:
+        class: %userbundle_user.user.permission.security_provider.class%
+        tags:
+            - { name: userbundle_user.user.permission_provider, alias: user }
+
+    userbundle_user.user.permission_builder:
+        class: %userbundle_user.user.permission_builder.class%
+
+    userbundle_user.registration.form.type:
+        class: Arko\UserBundle\Form\Type\UserFormType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: user }
+
+    userbundle_user.group.form.type:
+        class: Arko\UserBundle\Form\Type\GroupFormType
+        arguments: [%fos_user.model.group.class%, @userbundle_user.user.permission_builder]
+        tags:
+            - { name: form.type, alias: fos_user_group }
