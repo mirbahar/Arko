@@ -122,7 +122,7 @@ class UserController extends Controller
 
     /**
      * @Route("/user/edit/{id}", name="user_edit")
-     * @Template("UserBundle:Registration:register.html.twig")
+     * @Template("ArkoUserBundle:Registration:register.html.twig")
      * @param Request $request
      * @param User $user
      * @JMS\Secure(roles="ROLE_SUPER_ADMIN")

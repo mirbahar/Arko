@@ -65,6 +65,7 @@ fos_user:
     from_email:
             address: "noreply@yourcompany.com"
             sender_name: "No Reply"
+
 #imports:
 #    - { resource: parameters.yml }
 #    - { resource: security.yml }
