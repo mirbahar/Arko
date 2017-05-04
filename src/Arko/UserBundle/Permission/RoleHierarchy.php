@@ -8,6 +8,7 @@ class RoleHierarchy extends BaseRoleHierarchy
 {
     public function __construct(array $hierarchy, PermissionBuilder $permissionBuilder)
     {
+
         parent::__construct($permissionBuilder->getPermissionHierarchy());
     }
 } 

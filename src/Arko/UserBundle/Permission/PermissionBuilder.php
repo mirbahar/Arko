@@ -11,6 +11,7 @@ class PermissionBuilder
     public function __construct()
     {
         $this->providers = array();
+
     }
 
     public function addProvider(ProviderInterface $provider, $alias)
@@ -43,6 +44,7 @@ class PermissionBuilder
     {
         $hierarchy = $this->getPermissionHierarchy();
         $choices = array();
+
 
         foreach ($hierarchy as $parent => $children) {
 

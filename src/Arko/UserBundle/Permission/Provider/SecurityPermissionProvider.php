@@ -8,7 +8,8 @@ class SecurityPermissionProvider implements ProviderInterface
     {
         return array(
             'USER' => array('ROLE_USER','ROLE_ADMIN'),
-            'ROLE_SUPER_ADMIN' => array('ROLE_SUPER_ADMIN')
+            'ROLE_SUPER_ADMIN' => array('ROLE_SUPER_ADMIN'),
+            'ROLE_EXTRA' => array('ROLE_SUPER_ADMIN','ROLE_EDIT')
         );
     }
 }

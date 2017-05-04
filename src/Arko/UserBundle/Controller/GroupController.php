@@ -78,6 +78,7 @@ class GroupController extends Controller
         $groupManager = $this->container->get('fos_user.group_manager');
         $group = $groupManager->createGroup('');
         $service = $this->get('userbundle_user.group.form.type');
+//        var_dump($service);die;
         $form = $this->createForm($service, $group);
 
         if ('POST' === $request->getMethod()) {

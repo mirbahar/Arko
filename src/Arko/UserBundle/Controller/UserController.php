@@ -22,7 +22,7 @@ class UserController extends Controller
      * @return object
      */
     protected function getDoctrineManager(){
-        return $this->getDoctrine()->getManager()->getRepository("UserBundle:User");
+        return $this->getDoctrine()->getManager()->getRepository("ArkoUserBundle:User");
     }
 
     /**
@@ -38,6 +38,7 @@ class UserController extends Controller
      * @JMS\Secure(roles="ROLE_SUPER_ADMIN")
      */
     public function indexAction(){
+
         return array('users' => $this->getDoctrineManager()->findAll());
     }
 

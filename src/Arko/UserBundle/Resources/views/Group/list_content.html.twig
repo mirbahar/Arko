@@ -4,8 +4,8 @@
     {% for group in groups %}
         <li>
             {{ group.getName() }}
-            <a href="{{ path('fos_user_group_edit', {'id': group.id}) }}">Edit</a>
-            <a href="{{ path('fos_user_group_delete', {'id': group.id}) }}">Delete</a>
+            <a href="{{ path('user_group_edit', {'id': group.id}) }}">Edit</a>
+            <a href="{{ path('user_group_delete', {'id': group.id}) }}">Delete</a>
         </li>
     {% endfor %}
     </ul>

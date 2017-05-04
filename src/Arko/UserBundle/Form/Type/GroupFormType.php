@@ -15,6 +15,7 @@ class GroupFormType extends AbstractType
     {
         $this->class = $class;
         $this->permissionBuilder = $permissionBuilder;
+
     }
     /**
      * @param FormBuilderInterface $builder
