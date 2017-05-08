@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "61bfbce99949b41570d1ceb52b9503b0",
+    "content-hash": "9c8df9f01491a17c7d7a616f9b728604",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1094,16 +1094,16 @@
         },
         {
             "name": "jms/di-extra-bundle",
-            "version": "1.8.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/JMSDiExtraBundle.git",
-                "reference": "53d0a974d79f1793a4168fbafe98f273d3e1b3e0"
+                "reference": "8958e3669f4df4bbcac88eccc19cae0aabc82dd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/JMSDiExtraBundle/zipball/53d0a974d79f1793a4168fbafe98f273d3e1b3e0",
-                "reference": "53d0a974d79f1793a4168fbafe98f273d3e1b3e0",
+                "url": "https://api.github.com/repos/schmittjoh/JMSDiExtraBundle/zipball/8958e3669f4df4bbcac88eccc19cae0aabc82dd8",
+                "reference": "8958e3669f4df4bbcac88eccc19cae0aabc82dd8",
                 "shasum": ""
             },
             "require": {
@@ -1160,7 +1160,7 @@
                 "annotations",
                 "dependency injection"
             ],
-            "time": "2016-09-18T13:06:50+00:00"
+            "time": "2016-12-14 12:33:44"
         },
         {
             "name": "jms/metadata",
@@ -2909,7 +2909,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "jms/di-extra-bundle": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

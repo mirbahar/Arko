@@ -14,7 +14,6 @@ class DefaultController extends Controller
      * @Route("/")
      * @Template("ArkoCoreBundle:Default:index.html.twig")
      * @JMS\Secure(roles="ROLE_SUPER_ADMIN")
-     * @PreAuthorize("hasRole('ROLE_SUPER_ADMIN')")
      */
     public function indexAction()
     {
